@@ -11,6 +11,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DepensesController extends AbstractController
 {
+    protected $em;
+    public function __construct(EntityManagerInterface $entityManager) {
+        $this->em = $entityManager;
+      }
     #[Route('/depenses', name: 'Depenses')]
     public function index(): Response
     {

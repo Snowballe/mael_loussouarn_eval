@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Repository\DepensesRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use PhpParser\Node\Expr\Cast\Double;
 /**
  * @ORM\Entity(repositoryClass=DepensesRepository::class)
  */
@@ -44,8 +44,7 @@ class Depenses
 
     public function setId_personne($s): ?int
     {
-        $this->id_personne = $s;
-        return 0;
+        return $this->id_personne = $s;
     }
 
     public function getId_projet(): ?int
@@ -55,19 +54,19 @@ class Depenses
 
     public function setId_projet($s): ?int
     {
-        $this->id_projet = $s;
-        return 0;
+        return $this->id_projet = $s;
+        
     }
 
-    public function getMontant(): ?int
+    public function getMontant(): ?Double
     {
         return $this->montant;
     }
 
-    public function setMontant($s): ?int
+    public function setMontant($s): ?Double
     {
-        $this->montant = $s;
-        return 0;
+        return $this->montant = $s;
+        
     }
 
 }

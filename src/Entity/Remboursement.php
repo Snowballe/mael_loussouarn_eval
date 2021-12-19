@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\HomeRepository;
 use Doctrine\ORM\Mapping as ORM;
+use PhpParser\Node\Expr\Cast\Double;
 
 /**
  * @ORM\Entity(repositoryClass=HomeRepository::class)
@@ -44,8 +45,8 @@ class Remboursement
 
     public function setId_personne($s): ?int
     {
-        $this->id_personne = $s;
-        return 0;
+        return $this->id_personne = $s;
+        
     }
 
     public function getId_projet(): ?int
@@ -55,19 +56,19 @@ class Remboursement
 
     public function setId_projet($s): ?int
     {
-        $this->id_projet = $s;
-        return 0;
+        return $this->id_projet = $s;
+        
     }
 
-    public function getDette(): ?int
+    public function getDette(): ?Double
     {
         return $this->dette;
     }
 
-    public function setDette($s): ?int
+    public function setDette($s): ?Double
     {
-        $this->dette = $s;
-        return 0;
+        return $this->dette = $s;
+        
     }
 }
 
