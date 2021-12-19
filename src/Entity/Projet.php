@@ -2,11 +2,11 @@
 // src/Entity/Projet.php
 namespace App\Entity;
 
-use App\Repository\HomeRepository;
+use App\Repository\ProjetRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=HomeRepository::class)
+ * @ORM\Entity(repositoryClass=ProjetRepository::class)
  */
 class Projet
 {

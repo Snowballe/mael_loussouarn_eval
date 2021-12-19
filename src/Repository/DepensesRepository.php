@@ -2,32 +2,31 @@
 
 namespace App\Repository;
 
-use App\Entity\Home;
+use App\Entity\Depenses;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Doctrine\ORM\EntityRepository;
 
 /** 
- * @method Home|null find($id, $lockMode = null, lockVersion = null)
- * @method Home|null findOneBy(array $criteria, array $orderBy = null)
- * @method Home[] findAll()
- * @method Home[] findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Depenses|null find($id, $lockMode = null, lockVersion = null)
+ * @method Depenses|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Depenses[] findAll()
+ * @method Depenses[] findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
 */
 
-class HomeRepository extends ServiceEntityRepository{
+class DepensesRepository extends ServiceEntityRepository{
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Home::class);
+        parent::__construct($registry, Depenses::class);
     }
 
     // /**
-    //  * @return Home[] Returns an array of Home objects
+    //  * @return Depenses[] Returns an array of Depenses objects
     //  */
-    
-    public function findByID($value)
+    /*
+    public function findByExampleField($value)
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.ID = :val')
+            ->andWhere('c.exampleField = :val')
             ->setParameter('val', $value)
             ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
@@ -35,7 +34,7 @@ class HomeRepository extends ServiceEntityRepository{
             ->getResult()
         ;
     }
-    
+    */
 
     /*
     public function findOneBySomeField($value): ?Depenses

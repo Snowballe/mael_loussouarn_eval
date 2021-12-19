@@ -2,7 +2,11 @@
 
 namespace App\Controller;
 
-use App\Entity\Home;
+//use App\Entity\Home;
+
+use App\Entity\Personnes;
+use App\Repository\HomeRepository;
+
 
 use App\Form\HomeType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +19,7 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(): Response
     {
-        $repository=$this->getDoctrine()->getRepository(Home::class);
+        $repository=$this->getDoctrine()->getRepository(Personnes::class);
         $home=$repository->findAll();
 
         return $this->render('home/index.html.twig', [

@@ -1,12 +1,11 @@
- <?php
-// src/Entity/personnes.php
-namespace App\Entity;
+<?php
+namespace App\Entity; 
 
-use App\Repository\HomeRepository;
+use App\Repository\PersonnesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=HomeRepository::class)
+ * @ORM\Entity(repositoryClass=PersonnesRepository::class)
  */
 class Personnes
 {

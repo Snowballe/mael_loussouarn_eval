@@ -1,12 +1,12 @@
 <?php  
-// src/Entity/Depenses.php
+
 namespace App\Entity;
 
-use App\Repository\HomeRepository;
+use App\Repository\DepensesRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=HomeRepository::class)
+ * @ORM\Entity(repositoryClass=DepensesRepository::class)
  */
 class Depenses
 {
@@ -71,5 +71,4 @@ class Depenses
     }
 
 }
-
 ?>
