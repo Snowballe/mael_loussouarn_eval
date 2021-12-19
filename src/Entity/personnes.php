@@ -1,13 +1,14 @@
-// src/Entity/Product.php
+ <?php
+// src/Entity/personnes.php
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
+use App\Repository\HomeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\Entity(repositoryClass=HomeRepository::class)
  */
-class Product
+class Personnes
 {
     /**
      * @ORM\Id()
@@ -19,17 +20,41 @@ class Product
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $nom;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $price;
+    private $prenom;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    // ... getter and setter methods
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+   
+
+    public function setNom($s): ?int
+    {
+        $this->nom = $s;
+        return 0;
+    }
+
+    
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+    
+    public function setPrenom($s): ?int
+    {
+        $this->prenom = $s;
+        return 0;
+    } 
 }
+?>
