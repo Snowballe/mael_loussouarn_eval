@@ -27,24 +27,13 @@ class HomeController extends AbstractController
         ]);
     }
     
-    
-
-    #[Route("/projet/nouveau", name: "creerunnouveauprojet")]
-    public function direBonjour($prenom){
-        $modele=["prenom"=>$prenom];
-
-        return $this->render('home/bonjour.html.twig', $modele);
+    #[Route('/login', name: 'login')]
+    public function Login(): Response
+    {
+        return $this->render('home/login.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
     }
 
-    #[Route('/projet/gerer/{nom_projet}',name:'gererprojet')]
-    public  function gererProjet($id, $id_projet){
-        
-        return $this->render('categories/gestionprojet.html.twig');
-    }
-
-    #[Route("/remboursement/gerer",name:"gererremboursements")]
-    public function gererRemboursements(){
-        
-        return $this->render('categories/gestionremboursement.html.twig');
-    }
+   
 }
