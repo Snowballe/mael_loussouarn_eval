@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DepensesController extends AbstractController
 {
-    #[Route('/moncompte/mesdepenses', name: 'Depenses')]
+    #[Route('moncompte/mesdepenses', name: 'Depenses')]
     public function index(): Response
     {
         $repository=$this->getDoctrine()->getRepository(Personnes::class);
@@ -23,20 +23,20 @@ class DepensesController extends AbstractController
         ]);
     }
     
-    #[Route("/projet/nouveau", name: "creerunnouveauprojet")]
+    #[Route("projet/nouveau", name: "creerunnouveauprojet")]
     public function direBonjour($prenom){
         $modele=["prenom"=>$prenom];
 
         return $this->render('home/bonjour.html.twig', $modele);
     }
 
-    #[Route('/projet/gerer/{nom_projet}',name:'gererprojet')]
+    #[Route('projet/gerer/{nom_projet}',name:'gererprojet')]
     public  function gererProjet($id, $id_projet){
         
-        return $this->render('categories/gestionprojet.html.twig');
+        return $this->render('personnes/gestionprojet.html.twig');
     }
 
-    #[Route("/remboursement/gerer",name:"gererremboursements")]
+    #[Route("remboursement/gerer",name:"gererremboursements")]
     public function gererRemboursements(){
         
         return $this->render('categories/gestionremboursement.html.twig');
