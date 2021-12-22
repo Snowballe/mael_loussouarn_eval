@@ -33,7 +33,7 @@ class DepensesController extends AbstractController
     #[Route('projet/gerer/{nom_projet}',name:'gererprojet')]
     public  function gererProjet($id, $id_projet){
         
-        return $this->render('personnes/gestionprojet.html.twig');
+        return $this->render('personnes/gestiontou.html.twig');
     }
 
     #[Route("remboursement/gerer",name:"gererremboursements")]

@@ -586,6 +586,7 @@ class ComposerStaticInitc7563b902f52adca75a4c15a36ccc8e2
         'App\\Repository\\DepensesRepository' => __DIR__ . '/../..' . '/src/Repository/DepensesRepository.php',
         'App\\Repository\\HomeRepository' => __DIR__ . '/../..' . '/src/Repository/HomeRepository.php',
         'App\\Repository\\PersonnesRepository' => __DIR__ . '/../..' . '/src/Repository/PersonnesRepository.php',
+        'App\\Repository\\ProjetRepository' => __DIR__ . '/../..' . '/src/Repository/ProjetRepository.php',
         'App\\Repository\\RemboursementRepository' => __DIR__ . '/../..' . '/src/Repository/RemboursementRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

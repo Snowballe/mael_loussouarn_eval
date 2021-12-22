@@ -11,16 +11,16 @@ use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 class getCheckReomboursementService extends App_KernelDevDebugContainer
 {
     /**
-     * Gets the private 'App\Form\CheckReomboursement' shared autowired service.
+     * Gets the private 'App\Form\CheckRemboursement' shared autowired service.
      *
-     * @return \App\Form\CheckReomboursement
+     * @return \App\Form\CheckRemboursement
      */
     public static function do($container, $lazyLoad = true)
     {
         include_once \dirname(__DIR__, 4).'/vendor/symfony/form/FormTypeInterface.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/form/AbstractType.php';
-        include_once \dirname(__DIR__, 4).'/src/Form/CheckReomboursement.php';
+        include_once \dirname(__DIR__, 4) . '/src/Form/CheckRemboursement.php';
 
-        return $container->privates['App\\Form\\CheckReomboursement'] = new \App\Form\CheckReomboursement();
+        return $container->privates['App\\Form\\CheckRemboursement'] = new \App\Form\CheckRemboursement();
     }
 }

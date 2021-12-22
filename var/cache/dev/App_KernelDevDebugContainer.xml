@@ -362,7 +362,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\ProjetRepository" class="App\Repository\ProjetRepository" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\ProjetRepository" class="App\Repository\ProjetRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\RemboursementRepository" class="App\Repository\RemboursementRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -4430,7 +4433,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.ioMwuHQ"/>
+      <argument type="service" id=".service_locator.U7fHVrb"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5448,6 +5451,8 @@
     <service id=".abstract.instanceof.App\Repository\HomeRepository" class="App\Repository\HomeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PersonnesRepository" class="App\Repository\PersonnesRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PersonnesRepository" class="App\Repository\PersonnesRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProjetRepository" class="App\Repository\ProjetRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProjetRepository" class="App\Repository\ProjetRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RemboursementRepository" class="App\Repository\RemboursementRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\RemboursementRepository" class="App\Repository\RemboursementRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6036,12 +6041,13 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.ioMwuHQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.U7fHVrb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\DepensesRepository" type="service_closure" id="App\Repository\DepensesRepository"/>
         <argument key="App\Repository\HomeRepository" type="service_closure" id="App\Repository\HomeRepository"/>
         <argument key="App\Repository\PersonnesRepository" type="service_closure" id="App\Repository\PersonnesRepository"/>
+        <argument key="App\Repository\ProjetRepository" type="service_closure" id="App\Repository\ProjetRepository"/>
         <argument key="App\Repository\RemboursementRepository" type="service_closure" id="App\Repository\RemboursementRepository"/>
       </argument>
     </service>

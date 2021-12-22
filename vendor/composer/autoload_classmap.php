@@ -18,6 +18,7 @@ return array(
     'App\\Repository\\DepensesRepository' => $baseDir . '/src/Repository/DepensesRepository.php',
     'App\\Repository\\HomeRepository' => $baseDir . '/src/Repository/HomeRepository.php',
     'App\\Repository\\PersonnesRepository' => $baseDir . '/src/Repository/PersonnesRepository.php',
+    'App\\Repository\\ProjetRepository' => $baseDir . '/src/Repository/ProjetRepository.php',
     'App\\Repository\\RemboursementRepository' => $baseDir . '/src/Repository/RemboursementRepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
