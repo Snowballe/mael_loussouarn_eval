@@ -2,11 +2,12 @@
 // src/Entity/Projet.php
 namespace App\Entity;
 
-use App\Repository\HomeRepository;
+use App\Repository\ProjetRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
-
+use PhpParser\Node\Expr\Cast\Double;
 /**
- * @ORM\Entity(repositoryClass=HomeRepository::class)
+ * @ORM\Entity(repositoryClass=ProjetRepository::class)
  */
 class Projet
 {
@@ -52,10 +53,10 @@ class Projet
         return $this->nom;
     }
 
-    public function setNom($s): ?int
+    public function setNom($s): ?string
     {
-        $this->nom = $s;
-        return 0;
+        return $this->nom = $s;
+         
     }
 
     public function getId_personne(): ?int
@@ -65,41 +66,41 @@ class Projet
 
     public function setId_personne($s): ?int
     {
-        $this->id_personne = $s;
-        return 0;
+        return $this->id_personne = $s;
+        
     }
 
-    public function getTotal_montant(): ?int
+    public function getTotal_montant(): ?Double
     {
         return $this->total_montant;
     }
 
-    public function setTotal_montant($s): ?int
+    public function setTotal_montant($s): ?Double
     {
-        $this->total_montant = $s;
-        return 0;
+        return $this->total_montant = $s;
+        
     }
 
-    public function getMoyenne(): ?int
+    public function getMoyenne(): ?Double
     {
         return $this->moyenne;
     }
 
-    public function setMoyenne($s): ?int
+    public function setMoyenne($s): ?Double
     {
-        $this->moyenne = $s;
-        return 0;
+        return $this->moyenne = $s;
+         
     }
 
-    public function getDate_soiree(): ?int
+    public function getDate_soiree(): ?DateTime
     {
         return $this->date_soiree;
     }
 
-    public function setDate_soiree($s): ?int
+    public function setDate_soiree($s): ?DateTime
     {
-        $this->date_soiree = $s;
-        return 0;
+        return  $this->date_soiree = $s;
+        
     }
 }
 

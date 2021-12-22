@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pour s'inscrire ou se connecter, c'est ici!{% endblock %}
+
+{% block body %}
+<h2>Inscription</h2>
+    {{ form(inscription) }}
+<h2>Connexion</h2>
+    {{ form(connection) }}
+{% endblock %}
